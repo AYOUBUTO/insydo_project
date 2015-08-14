@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if longest_substring %}
+    The longest substring found:
+    <h3>{{ longest_substring  }}</h3>
+{% endif %}
+
+<form action="{% url 'longest_string' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

@@ -8,6 +8,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'insydo_project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', include('insydoapp.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'insydoapp.views.longest_string_view', name='longest_string'),
 )

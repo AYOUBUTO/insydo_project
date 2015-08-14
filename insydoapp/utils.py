@@ -24,7 +24,7 @@ def longest_substring(list_strings):
 
                 for other_sub in other_subs:
                     other_sub = other_sub.strip()
-                    if sub != other_sub and sub in other_sub[0:len(sub)]:
+                    if sub in other_sub[0:len(sub)]:
                         #Track iterations
                         if idx_other not in track[sub]:
                             track[sub].append(idx_other)

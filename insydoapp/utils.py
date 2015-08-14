@@ -15,6 +15,7 @@ def longest_substring(list_strings):
 
         # Split each line substrings
         for sub in subs:
+            sub = sub.strip()
             track[sub]=[idx] #The index line where it's found
 
             #We keep searching in other lines Except the one where we found the sub
@@ -22,7 +23,7 @@ def longest_substring(list_strings):
                 other_subs = other_line.split(" ")
 
                 for other_sub in other_subs:
-
+                    other_sub = other_sub.strip()
                     if sub != other_sub and sub in other_sub[0:len(sub)]:
                         #Track iterations
                         if idx_other not in track[sub]:
